@@ -6,10 +6,10 @@ AI_class=["Elina","Jarred","Janet","Michelle","Mathilda","mikko"]
   to print a list of all the students that are in programming class 
   and in AI class."""
 
-for student in programming_class:
+"""for student in programming_class:
     for students in AI_class:
         if student[1]==students[2] :
-            print(student) 
+            print(student) """
                   
 """for student in programming_class:
     for students in AI_class:
