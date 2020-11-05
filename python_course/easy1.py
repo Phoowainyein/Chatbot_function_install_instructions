@@ -1,7 +1,7 @@
 #! /usr/bin/python3
-import numpy as np
-import PIL 
+#pip3 install pillow
 from PIL import Image
+import numpy as np
 
 def grayscale(colors):
     red, green, blue = colors
@@ -19,13 +19,11 @@ def grayscale(colors):
 image_frame = Image.open('ROS_Crystal_Logo.png')
 #next make nympy array from picture
 np_image = np.array(image_frame)
-print("3dimensional array: ",np_image.shape)#(676,639,3)
 
 #we convert image to grey scale.
 #Before we have 3d array with 3 color arrays 
 #after this we have 2d array in grey scale
 np_image_in_grayscale = np.apply_along_axis(grayscale, 2, np_image)
-print("now it's 2D array : ",np_image_in_grayscale.shape)
 
 #Next we convert nympy array to type uint8
 #That means that every pixel in array has 8 bit value, that
@@ -61,8 +59,27 @@ print(cropped_np_gray_image_int.shape[0])
 small_image = np.zeros((79,79)).astype(np.uint8)
 print(small_image.shape)
 
+for y in range(0,len(cropped_np_gray_image_int),8):
+    for x in range(len(small_image)):
+        if cropped_np_gray_image_int[y][0]==small_image[x][0]:
+            print(cropped_np_gray_image_int.shape)
+        new_image = Image.fromarray(cropped_np_gray_image_int)
+        filename ='ros_crystal_small_easy1.png'
+        new_image.save(filename)
+
+
+            
+
 """
 easy: make for loops to take one pixel from every 8x8 pixels from
 cropped_np_gray_image_int and save it right place in small_image array,
 make picture from array, and save file as ros_crystal_small_easy.png
+return this image and code to moodle
+
+normal: Same that easy, but now look every 8x8 pixels and save brightest
+to small_image_array, and use ros_crystal_small_normal.png
+return this image and code to moodle
+
+hard: same as easy, but now look every 8x8 pixels and save average of those 
+pixels to small_image array, and use ros_crystal_small_hard.png
 return this image and code to moodle"""

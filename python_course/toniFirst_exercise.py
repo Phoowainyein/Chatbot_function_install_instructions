@@ -59,6 +59,17 @@ print(cropped_np_gray_image_int.shape[0])
 small_image = np.zeros((79,79)).astype(np.uint8)
 print(small_image.shape)
 
+for y in range(0,len(cropped_np_gray_image_int),8):
+    for x in range(len(small_image)):
+        if cropped_np_gray_image_int[y][0]==small_image[x][1]:
+            cropped_np_gray_image_int = small_image[y][x]
+            cropped_np_gray_image_int=Image.fromarray(cropped_np_gray_image_int)
+        filename ='ros_crystal_small_easy.png'
+        cropped_np_gray_image_int.save(filename)
+
+
+            
+
 """
 easy: make for loops to take one pixel from every 8x8 pixels from
 cropped_np_gray_image_int and save it right place in small_image array,
@@ -71,5 +82,4 @@ return this image and code to moodle
 
 hard: same as easy, but now look every 8x8 pixels and save average of those 
 pixels to small_image array, and use ros_crystal_small_hard.png
-return this image and code to moodle
-"""
+return this image and code to moodle"""
