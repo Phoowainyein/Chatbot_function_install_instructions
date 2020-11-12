@@ -58,14 +58,16 @@ print(cropped_np_gray_image_int.shape[0])
 #Next we make empty 2d numpy array
 small_image = np.zeros((79,79)).astype(np.uint8)
 print(small_image.shape)
-
-for y in range(0,len(cropped_np_gray_image_int),8):
-    for x in range(len(small_image)):
-        if cropped_np_gray_image_int[y][0]==small_image[x][0]:
-            print(cropped_np_gray_image_int.shape)
-        new_image = Image.fromarray(cropped_np_gray_image_int)
-        filename ='ros_crystal_small_easy1.png'
-        new_image.save(filename)
+print(len(cropped_np_gray_image_int))
+for y in range(79):
+    for x in range(79):
+        
+        small_image[x][y]=cropped_np_gray_image_int[x*8][y*8]
+       
+            #print(cropped_np_gray_image_int.shape)
+new_image=Image.fromarray(small_image)
+filename='phoo_easy1.png'
+new_image.save(filename)
 
 
             
