@@ -8,7 +8,7 @@ def easy(dice,number_of_sides_in_dice):
         results.append(each)
     return results
 #step2
-number_of_sides_in_dice = int(input("how many-sided dice you want to cast?"))
+number_of_sides_in_dice = int(input("how many-sided dice you want to cast? : "))
 dice = easy(1,number_of_sides_in_dice)
 print(dice)
 

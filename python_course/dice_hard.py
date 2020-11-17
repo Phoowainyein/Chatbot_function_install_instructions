@@ -15,7 +15,7 @@ def ask_number_of_sides_in_dice():
 num_side_diced_from_user=ask_number_of_sides_in_dice()
 print(num_side_diced_from_user)
 roll_dice = random.choice(num_side_diced_from_user)
-print("Here is the result after rolling the dice : ",roll_dice)
+print("Here is the result : ",roll_dice)
 
 #starting point for normal
 numbers_of_rolls= int(input("How many rolls do you want ? : "))
