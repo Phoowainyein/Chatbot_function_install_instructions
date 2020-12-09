@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise - Box Model</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+      .answer-container-1 {
+        background-color:#1A2952;
+        padding: 20px;
+        color: white;
+        border:10px solid #1A2952;
+        
+        
+      }
+
+      /* YOUR STYLES GO HERE  #1A2952*/
+      .modal{
+        border-radius:20px;
+        background-color:#0A1D41;
+        margin:20px 40px;
+        padding:20px;
+        text-align: center;
+        border: 40px solid #0A1D41;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="exercise-title">Exercise: Box</h2>
+    <p>Add CSS code to make your boxes look about the same as in image below.</p>
+    <p>Some helpful CSS properties to use: <strong>margin, padding, border-radius, background.</strong></p>
+    <p>Background color for the modal is <strong>#0A1D41</strong></p>
+    <img src="ex1_box.jpg" alt="Exercise 1 - Image" />
+
+    <br /><br />
+    <h2>Answer for exercise:</h2>
+    <div class="answer-container-1">
+      <div class="modal">
+        <h2>Hello There</h2>
+        <p>I think this color suits me nicely...</p>
+      </div>
+    </div>
+  </body>
+</html>
